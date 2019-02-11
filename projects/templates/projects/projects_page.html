@@ -1,0 +1,36 @@
+{% load wagtailcore_tags static wagtailimages_tags %}
+
+<section class="portfolio-section section center-text">
+  <div class="container" id="portfolio-section-scroll">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="heading">
+          <h3><b>Projects</b></h3>
+          <h6 class="font-lite-black"><b>A GLIMPSE OF MY PORTFOLIO</b></h6>
+        </div>
+      </div><!-- col-sm-12 -->
+
+
+      <div class="col-sm-12">
+        <div class="portfolioFilter clearfix margin-b-80">
+          <a href="{% static '#" data-filter="*" class="current"><b>All projects</b></a>
+          <a href="{% static '#" data-filter=".WordPress"><b>WordPress</b></a>
+          <a href="{% static '#" data-filter=".Prestashop"><b>Prestashop</b></a>
+          <a href="{% static '#" data-filter=".Django"><b>Django</b></a>
+        </div><!-- portfolioFilter -->
+      </div><!-- col-sm-8 -->
+    </div><!-- row -->
+
+    <div class="portfolioContainer margin-b-50">
+
+      {% for post in page.get_children.specific %}
+      <div class="p-item {% for technology in post.technologies.all %} {{ technology.name }} {% endfor %}">
+        <a href="{{ post.link }}" class="portfolio-link" target="_blank">{{ post.title }}</a>
+          {% image post.project_image original class="img-fluid" alt="{{ post.title }}" %}
+        </a>
+      </div>
+      {% endfor %}
+
+    </div><!-- portfolioContainer -->
+  </div><!-- container -->
+</section><!-- portfolio-section -->
