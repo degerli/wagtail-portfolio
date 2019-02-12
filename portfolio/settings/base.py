@@ -24,6 +24,9 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+	'wagtail_modeltranslation',
+	'wagtail_modeltranslation.makemigrations',
+	'wagtail_modeltranslation.migrate',
     'home',
     'search',
     'projects',
@@ -54,6 +57,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+	'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
