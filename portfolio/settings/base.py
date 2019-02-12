@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGES = (
+    ('nl', _('Dutch')),
+    ('en', _('English')),
+)
+
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
@@ -27,6 +34,7 @@ INSTALLED_APPS = [
 	'wagtail_modeltranslation',
 	'wagtail_modeltranslation.makemigrations',
 	'wagtail_modeltranslation.migrate',
+    
     'home',
     'search',
     'projects',
@@ -173,11 +181,3 @@ WAGTAIL_SITE_NAME = "portfolio"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
-
-
-from django.utils.translation import gettext_lazy as _
-
-LANGUAGES = (
-    ('nl', _('Dutch')),
-    ('en', _('English')),
-)
