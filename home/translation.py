@@ -1,8 +1,8 @@
-from .models import Foo
+from .models import HomePage
 from modeltranslation.translator import TranslationOptions
 from modeltranslation.decorators import register
 
-@register(Foo)
+@register(HomePage)
 class FooTR(TranslationOptions):
     fields = (
         'intro_left',
