@@ -5,5 +5,5 @@ from modeltranslation.decorators import register
 @register(Foo)
 class FooTR(TranslationOptions):
     fields = (
-        'body',
+        'intro_left',
     )
