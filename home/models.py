@@ -22,7 +22,7 @@ class HomePage(Page):
         FieldPanel('intro_right', classname="full"),
     ]
 
-    # Display the portfolio items !IMPORTANT! take a good look at the slug, otherwise the page wont render.
+    # Display the portfolio items !IMPORTANT! take a good look at the slug, you have to create a base parent page first (Projects page) and insert te slug under here. Otherwise the page wont render.
     # Generate a projects page and insert that slug down here at Page.objects.get(slug='my-slug')
     def get_context(self, request):
         context                     = super(HomePage, self).get_context(request)
