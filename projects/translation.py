@@ -4,12 +4,8 @@ from modeltranslation.decorators import register
 
 @register(ProjectsPage)
 class ProjectsPageTR(TranslationOptions):
-    fields = (
-        'description',
-    )
+    pass
 
 @register(IndividualProjectsPage)
 class IndividualProjectsPageTR(TranslationOptions):
-    fields = (
-        'technologies',
-    )
+    pass
