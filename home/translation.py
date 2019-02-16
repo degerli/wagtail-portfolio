@@ -15,6 +15,6 @@ class ProjectsPageTR(TranslationOptions)
         'description',
     )
 
-@register(ProjectsPage)
+@register(IndividualProjectsPage)
 class IndividualProjectsPageTR(TranslationOptions)
     pass
