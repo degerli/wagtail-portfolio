@@ -1,4 +1,4 @@
-from .models import ProjectsPage, IndividualProjectsPage
+from .models import ProjectsPage
 from modeltranslation.translator import TranslationOptions
 from modeltranslation.decorators import register
 
@@ -7,7 +7,3 @@ class ProjectsPageTR(TranslationOptions):
     fields = (
         'description',
     )
-
-@register(IndividualProjectsPage)
-class IndividualProjectsPageTR(TranslationOptions):
-    pass
