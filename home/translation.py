@@ -10,11 +10,11 @@ class HomePageTR(TranslationOptions):
     )
 
 @register(ProjectsPage)
-class ProjectsPageTR(TranslationOptions)
+class ProjectsPageTR(TranslationOptions):
     fields = (
         'description',
     )
 
 @register(IndividualProjectsPage)
-class IndividualProjectsPageTR(TranslationOptions)
+class IndividualProjectsPageTR(TranslationOptions):
     pass
