@@ -16,8 +16,8 @@ import os
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = (
-    ('nl', _('Dutch')),
     ('en', _('English')),
+    ('nl', _('Dutch')),
 )
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
